@@ -1,0 +1,254 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    background-color: #F6F8F5; /* Cor de fundo similar ao PDF */
+    color: #333333; /* Cor do texto */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #CBE3D8; /* Cor de fundo do cabeçalho */
+    padding: 10px 5%;
+    border-bottom: 1px solid #D8E4DC; /* Linha de separação */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #89C9A4; /* Cor do logo HANA RH */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #73a889; /* Cor dos links do menu */
+    font-weight: 500;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+    color: #A4D4BA; /* Um verde sutil para hover */
+}
+
+main {
+    padding: 20px 5%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.page {
+    display: none; /* Todas as páginas começam escondidas */
+    background-color: #FDFBF8; /* Fundo um pouco mais claro para conteúdo */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.page.active {
+    display: block; /* Página ativa é mostrada */
+}
+
+h1, h2, h3 {
+    color: #3A3A3A; /* Cor dos títulos */
+    margin-top: 0;
+}
+h1 { font-size: 2.8em; margin-bottom: 10px;} /* HANA RH */
+h2 { font-size: 2.2em; margin-bottom: 20px;} /* Títulos de seção */
+h3 { font-size: 1.5em; margin-bottom: 15px;}
+
+p {
+    margin-bottom: 15px;
+    color: #4A4A4A;
+}
+
+/* Home Page Specific */
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.home-text {
+    flex: 1;
+}
+.home-text .social-handle {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+.social-icons a {
+    text-decoration: none;
+    color: #585858;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+.home-image {
+    flex-basis: 40%; /* Ajuste conforme necessário */
+}
+.home-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+
+/* Formulários */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4A4A4A;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="file"],
+form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #D0C9C0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+}
+form textarea {
+    resize: vertical;
+}
+form button, button {
+    background-color: #86B365; /* Verde dos botões Cliente */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+form button:hover, button:hover {
+    background-color: #709e50;
+}
+
+/* Vagas Page */
+.candidato-actions {
+    margin-bottom: 20px;
+}
+.candidato-actions button {
+    margin-right: 10px;
+    background-color: #D0C9C0;
+    color: #333;
+}
+.candidato-actions button.active-btn {
+    background-color: #86B365;
+    color: white;
+}
+
+.vagas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.vaga-card {
+    border: 1px solid #E0D9D0;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #FFF;
+}
+.vaga-card h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+.vaga-card button {
+    background-color: #5A5A5A; /* Botão Candidatar-se mais escuro */
+    width: 100%;
+    margin-top: 15px;
+}
+.vaga-card button:hover {
+    background-color: #404040;
+}
+.mais-vagas {
+    text-align: right;
+    margin-top: 20px;
+    color: #777;
+}
+.mais-vagas .arrow {
+    color: #86B365;
+    font-weight: bold;
+}
+
+/* Feedback Page */
+.feedback-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.feedback-content li {
+    margin-bottom: 8px;
+}
+
+/* Área do Cliente */
+.dashboard-buttons button {
+    margin: 5px;
+    background-color: #A0C183; /* Tom mais claro para botões do dashboard */
+}
+.dashboard-buttons button:hover {
+    background-color: #86B365;
+}
+#cliente-sub-content {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #F9F7F4;
+    border: 1px solid #EAE5E0;
+    border-radius: 4px;
+}
+.cliente-subpage h3 {
+    border-bottom: 1px solid #E0D9D0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.cliente-subpage ul {
+    list-style: none;
+    padding-left: 0;
+}
+.cliente-subpage ul ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    border-left: 2px solid #EAE5E0;
+}
+.cliente-subpage li {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #E0D9D0;
+}

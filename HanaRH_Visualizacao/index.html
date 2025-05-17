@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hana RH - Visualização do Projeto</title>
+
+    <!-- COLE AQUI O CÓDIGO DO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- FIM DO CÓDIGO DO GOOGLE FONTS -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVDhPlZJBSwJREEXXf+AL8T8Q/gylSA8RUcRAsFA0SNAQhSyJIqFICoWFoWlZpIiEpRVEUYgKghRBHxX1XDe+d8LQzLKL4MFw535nZmf2Lk7jP6/tJ2NENLhGgqI6A50gBqEoCg0Z0YgqA0LgA9KkSaSoAFwA3pQGzbULIHgARkABsE4g6L4GXND6fgC4AlY0C5A/BxFgCbgJvNsgGvz9MMAE+AYMgAfAYtBTA0jPjA/t70cKq4DB4DygD7S+22ChP4ALwA7YA2NQNrvYVl9iFzDBIZQFYGkLgAQoAGGAAnAD7AEvgoMUQN0+AXSAI/B64R4wAjYAa+D/B/wFngAVN+gVwHNAc4h8+A7sANnpFJDtM0AvGAOflwL0AP2A93Pq4uJgkL0F2IJTWALGEKNSASzCV8CMQnsX+AK8Az6DXf3gAyaANrAHRgJvXgUuCV230Bv0AZLAANgAXABTQPc+AhhgD4wDneN0iB8+H+n5g19A0QnL9RkQZAAAAABJRU5ErkJggg==" 
+            alt="Hana Flower Icon" 
+            style="vertical-align: middle; margin-left: 5px; filter: invert(20%) sepia(10%) saturate(500%) hue-rotate(300deg) brightness(60%) contrast(100%);">
+            </div>
+            <ul>
+                <!-- NOVO BOTÃO HOME -->
+                <li><a href="#" onclick="showPage('home-page')">HOME</a></li>
+                <!-- AJUSTE NO CLIENTE -->
+                <li><a href="#" onclick="showPage('cliente-login-page')">CLIENTE</a></li>
+                <li><a href="#" onclick="showPage('candidato-page')">CANDIDATO</a></li>
+                <li><a href="#" onclick="showPage('solicitar-parceria-page')">SOLICITAR PARCERIA</a></li>
+                <li><a href="#" onclick="showPage('sobre-nos-page')">SOBRE NÓS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PÁGINA INICIAL (Slide 1 adaptado) -->
+        <section id="home-page" class="page active">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1>HANA RH</h1>
+                    <p>Simplificando o recrutamento, valorizando o capital humano.</p>
+                    <p class="social-handle">@hana_rh_brasil</p>
+                    <div class="social-icons">
+                        <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="home-image">
+                    <img src="flor.png" alt="Flor de Cerejeira">
+                    <!-- Imagem de flor de cerejeira, você pode trocar pelo link da sua imagem ou um arquivo local -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE NÓS (Slide 2) -->
+        <section id="sobre-nos-page" class="page">
+            <h2>Sobre nós</h2>
+            <p>Na Hana RH, acreditamos que cada candidato merece mais do que um simples silêncio ou uma rejeição genérica. Por isso, criamos uma solução que alia tecnologia e empatia: nosso agente de inteligência artificial realiza triagens criteriosas e envia feedbacks personalizados para cada aplicação, considerando os requisitos da vaga e o perfil de outros candidatos.</p>
+            <p>Valorizamos o tempo, o esforço e o potencial de cada pessoa — mesmo quando a resposta for negativa, acreditamos que ela pode ser uma oportunidade de aprendizado e crescimento.</p>
+            <p>Estamos aqui para simplificar o recrutamento e valorizar o capital humano em cada etapa do processo.</p>
+        </section>
+
+        <!-- SOLICITAR PARCERIA (Slides 3 & 4) -->
+        <section id="solicitar-parceria-page" class="page">
+            <h2>Solicitar Parceria</h2>
+            <div id="parceria-form-view">
+                <p>Quer contar com os serviços da Hana RH?</p>
+                <p>Preencha os campos abaixo e nossa equipe entrará em contato com você em até 3 dias úteis.</p>
+                <form id="parceria-form">
+                    <label for="parceria-nome">Nome completo:</label>
+                    <input type="text" id="parceria-nome" name="parceria-nome" required>
+                    <label for="parceria-empresa">Empresa:</label>
+                    <input type="text" id="parceria-empresa" name="parceria-empresa" required>
+                    <label for="parceria-email">E-mail:</label>
+                    <input type="email" id="parceria-email" name="parceria-email" required>
+                    <label for="parceria-contato">Número para contato:</label>
+                    <input type="tel" id="parceria-contato" name="parceria-contato">
+                    <label for="parceria-mensagem">Mensagem de parceria – como a Hana RH pode apoiar seu processo de recrutamento?</label>
+                    <textarea id="parceria-mensagem" name="parceria-mensagem" rows="4" required></textarea>
+                    <button type="button" onclick="submitParceria()">ENVIAR</button>
+                </form>
+            </div>
+            <div id="parceria-confirm-view" style="display: none;">
+                <h3>Solicitação enviada!</h3>
+                <p>Nossa equipe entrará em contato com você em até 3 dias úteis.</p>
+                <p>Estamos empolgados para conhecer sua empresa!</p>
+            </div>
+        </section>
+
+        <!-- CANDIDATO - VAGAS (Slide 5) -->
+        <section id="candidato-page" class="page">
+            <h2>CANDIDATO</h2>
+            <div class="candidato-actions">
+                <button type="button" class="active-btn">VAGAS ABERTAS</button>
+                <button type="button" onclick="showPage('acesso-feedback-page')">MEU FEEDBACK ESPECIALIZADO</button>
+            </div>
+            <div class="vagas-grid">
+                <div class="vaga-card">
+                    <h3>Vaga 1: Desenvolvedor Python Júnior</h3>
+                    <p><strong>Localização:</strong> Remoto</p>
+                    <p><strong>Responsabilidades:</strong> Desenvolver e manter aplicações web em...</p>
+                    <button type="button" onclick="showCandidaturaForm('Desenvolvedor Python Júnior')">CANDIDATAR-SE</button>
+                </div>
+                <div class="vaga-card">
+                    <h3>Vaga 2: Pedagogo</h3>
+                    <p><strong>Localização:</strong> Presencial em Escola Municipal</p>
+                    <p><strong>Responsabilidades:</strong> Planejar e ministrar aulas para o Ensino Fundamental.</p>
+                    <button type="button" onclick="showCandidaturaForm('Pedagogo')">CANDIDATAR-SE</button>
+                </div>
+            </div>
+            <div class="mais-vagas">
+                <p>mais vagas <span class="arrow">→</span></p>
+            </div>
+        </section>
+
+        <!-- CANDIDATURA - FORM (Slides 6 & 7) -->
+        <section id="candidatura-form-page" class="page">
+            <h2>CANDIDATURA</h2>
+            <h3 id="vaga-selecionada-titulo"></h3>
+            <div id="candidatura-form-view">
+                <p>Antes de enviar, aqui vão algumas dicas rápidas para fortalecer sua candidatura:</p>
+                <ul>
+                    <li>Certifique-se de que seu currículo esteja alinhado à vaga e à empresa.</li>
+                    <li>Destaque experiências e habilidades relevantes para essa oportunidade.</li>
+                    <li>Mantenha suas informações claras, organizadas e atualizadas.</li>
+                    <li>Revise antes de enviar.</li>
+                </ul>
+                <form id="candidatura-form-fields">
+                    <label for="cand-nome">Nome completo:</label>
+                    <input type="text" id="cand-nome" required>
+                    <label for="cand-email">E-mail:</label>
+                    <input type="email" id="cand-email" required>
+                    <label for="cand-tel">Telefone para contato:</label>
+                    <input type="tel" id="cand-tel">
+                    <label for="cand-cv">Upload de currículo (PDF ou DOC):</label>
+                    <input type="file" id="cand-cv" accept=".pdf,.doc,.docx">
+                    <button type="button" onclick="submitCandidatura()">Enviar candidatura</button>
+                </form>
+            </div>
+            <div id="candidatura-confirm-view" style="display: none;">
+                <h3>Candidatura Enviada!</h3>
+                <p>Sua candidatura foi concluída com sucesso.</p>
+                <p>Só isso? Sim, só isso. Como deveria ser. 😊</p>
+                <p>A Hana RH existe para simplificar – tanto para as empresas quanto para quem está buscando uma vaga. Por isso, nada de preencher o mesmo currículo mil vezes ou navegar por 300 sites confusos.</p>
+                <p><strong>Importante:</strong> Se não for selecionado(a) para as próximas etapas, você receberá um e-mail com um feedback personalizado, ou com um link para acessá-lo.</p>
+                <p>Boa sorte com essa oportunidade! Estamos torcendo por você.</p>
+                <button type="button" onclick="showPage('candidato-page')">Voltar para Vagas</button>
+            </div>
+        </section>
+
+        <!-- ACESSO AO FEEDBACK (Slide 8) -->
+        <section id="acesso-feedback-page" class="page">
+            <h2>Acesso ao Feedback</h2>
+            <p><em>Esta página seria acessada por um link seguro enviado ao seu e-mail.</em></p>
+            <p>Para sua segurança, precisamos confirmar algumas informações antes de liberar o feedback.</p>
+            <form id="acesso-feedback-form-step1">
+                <label for="feedback-cod-vaga">Código da vaga (enviado no email):</label>
+                <input type="text" id="feedback-cod-vaga" value="VAGA_PYTHON_JR_2024" required>
+                <label for="feedback-email">E-mail usado na candidatura:</label>
+                <input type="email" id="feedback-email" value="joao.silva@email.com" required>
+                <button type="button" onclick="requestFeedbackCode()">Enviar código de acesso</button>
+            </form>
+            <div id="acesso-feedback-form-step2" style="display:none;">
+                <p>Um código de verificação foi enviado para <strong id="email-confirmado"></strong>. Ele expira em 10 minutos.</p>
+                <p>Seu código de acesso ao feedback da Hana RH: <strong>123456</strong> (simulado)</p>
+                <label for="feedback-codigo-verif">Código de verificação:</label>
+                <input type="text" id="feedback-codigo-verif" required>
+                <button type="button" onclick="verifyAndShowFeedback()">Acessar feedback</button>
+            </div>
+        </section>
+
+        <!-- FEEDBACK PARA CANDIDATO (Baseado no Slide 9) -->
+        <section id="feedback-display-page" class="page">
+            <h2>Feedback para <span id="nome-candidato-feedback">João Silva</span></h2>
+            <div class="feedback-content">
+                <p>Analisamos seu currículo em relação aos critérios da vaga de <strong>Desenvolvedor Python Júnior</strong> e ao perfil geral dos candidatos que avançaram.</p>
+                
+                <h3>Pontos Fortes do seu Currículo para esta Vaga:</h3>
+                <ul>
+                    <li>Sua experiência com desenvolvimento backend utilizando Django foi um ponto positivo.</li>
+                    <li>Conhecimento em Git para versionamento de código é relevante.</li>
+                </ul>
+
+                <h3>Áreas de Melhoria/Desalinhamento em Relação aos Critérios da Vaga:</h3>
+                <ul>
+                    <li>Para esta vaga, buscávamos candidatos com alguma experiência (mesmo que acadêmica) em testes unitários, o que não foi claramente identificado.</li>
+                    <li>A vaga mencionava como diferencial o conhecimento em Docker, que não constava em seu currículo.</li>
+                </ul>
+
+                <h3>Comparativo Geral (Anonimizado) com os Candidatos Selecionados:</h3>
+                <ul>
+                    <li>Em média, os candidatos que avançaram possuíam projetos pessoais ou contribuições open-source que demonstravam aplicação prática de Python.</li>
+                    <li>Muitos candidatos selecionados destacaram familiaridade com metodologias ágeis (Scrum/Kanban).</li>
+                </ul>
+
+                <h3>Sugestões:</h3>
+                <ul>
+                    <li>Considere incluir projetos no GitHub que demonstrem suas habilidades em Python e Django.</li>
+                    <li>Busque aprender sobre testes unitários (ex: PyTest, Unittest) e Docker, pois são tecnologias valorizadas no mercado.</li>
+                    <li>Se possui experiência com metodologias ágeis, mesmo que breve, destaque-a em seu currículo.</li>
+                </ul>
+                <p>Esperamos que este feedback seja útil para seu desenvolvimento profissional. Desejamos sucesso em sua jornada!</p>
+                <button type="button" onclick="showPage('candidato-page')">Voltar para Área do Candidato</button>
+            </div>
+        </section>
+
+        <!-- ÁREA DO CLIENTE - LOGIN (Slide 10) -->
+        <section id="cliente-login-page" class="page">
+            <h2>Área do Cliente</h2>
+             <p>Para acessar seu painel da Hana RH, informe o e-mail empresarial cadastrado.</p>
+             <p>Enviaremos um código de acesso temporário para garantir sua segurança.</p>
+            <div id="cliente-login-step1">
+                <label for="cliente-email">E-mail empresarial:</label>
+                <input type="email" id="cliente-email" value="rh@empresaexemplo.com">
+                <button type="button" onclick="requestClienteCode()">Enviar código de acesso</button>
+            </div>
+            <div id="cliente-login-step2" style="display:none;">
+                <p>Verifique sua caixa de entrada (<strong id="cliente-email-confirmado"></strong>).</p>
+                <p>Você receberá um e-mail com um código de 6 dígitos válido por 10 minutos. (Simulado: <strong>654321</strong>)</p>
+                <label for="cliente-codigo-verif">Código de verificação:</label>
+                <input type="text" id="cliente-codigo-verif">
+                <button type="button" onclick="loginCliente()">Acessar painel</button>
+            </div>
+        </section>
+
+        <!-- ÁREA DO CLIENTE - DASHBOARD (Slide 11) -->
+        <section id="cliente-dashboard-page" class="page">
+            <h2>Área do Cliente</h2>
+            <p>Olá, Empresa Exemplo!</p>
+            <p>Bem-vindo(a) ao seu painel da Hana RH. Aqui você gerencia tudo sobre suas vagas e candidatos de forma simples, rápida e eficaz.</p>
+            <div class="dashboard-buttons">
+                <button type="button" onclick="showClienteSubPage('cliente-minha-empresa-page')">MINHA EMPRESA</button>
+                <button type="button" onclick="showClienteSubPage('cliente-minhas-vagas-page')">MINHAS VAGAS</button>
+                <button type="button" onclick="showClienteSubPage('cliente-ver-candidatos-page')">CANDIDATOS</button>
+                <button type="button" onclick="showClienteSubPage('cliente-relatorios-page')">RESULTADOS E RELATÓRIOS</button>
+            </div>
+            <div id="cliente-sub-content">
+                <!-- Conteúdo das sub-páginas do cliente será carregado aqui -->
+            </div>
+        </section>
+
+        <!-- Conteúdo das Sub-páginas do Cliente (fora do fluxo principal de "showPage") -->
+        <div id="cliente-subpages-container" style="display:none;">
+            <div id="cliente-minha-empresa-page" class="cliente-subpage">
+                <h3>Minha Empresa</h3>
+                <p>Mantenha suas informações sempre atualizadas. Esses dados ajudam a Hana RH a personalizar melhor a comunicação com seus candidatos.</p>
+                <ul>
+                    <li><strong>Nome da empresa:</strong> Empresa Exemplo Ltda.</li>
+                    <li><strong>Área de atuação:</strong> Tecnologia</li>
+                    <li><strong>Site:</strong> www.empresaexemplo.com</li>
+                    <li><strong>Telefone de contato:</strong> (11) 99999-8888</li>
+                    <li><strong>Nome e e-mail do responsável pelo RH:</strong> Ana Souza - ana.souza@empresaexemplo.com</li>
+                </ul>
+                <button type="button">Editar</button> <button type="button">Salvar alterações</button>
+            </div>
+
+            <div id="cliente-minhas-vagas-page" class="cliente-subpage">
+                <h3>Minhas Vagas</h3>
+                <p>Aqui você pode publicar, editar ou remover vagas conforme sua necessidade. Quanto mais clara e objetiva a descrição, melhor será a triagem da Hana RH.</p>
+                <button type="button">[Nova vaga]</button>
+                <h4>Lista de vagas:</h4>
+                <ul>
+                    <li><strong>Vaga:</strong> Desenvolvedor Python Júnior
+                        <ul>
+                            <li>Status: Ativa</li>
+                            <li>[Botões: Editar] [Encerrar vaga] <button type="button" onclick="showClienteSubPage('cliente-ver-candidatos-page', 'Desenvolvedor Python Júnior')">[Ver candidatos]</button></li>
+                        </ul>
+                    </li>
+                    <li><strong>Vaga:</strong> Analista de Marketing Pleno
+                        <ul>
+                            <li>Status: Encerrada</li>
+                             <li>[Botões: Editar] [Reabrir vaga] <button type="button" onclick="showClienteSubPage('cliente-ver-candidatos-page', 'Analista de Marketing Pleno')">[Ver candidatos]</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="cliente-ver-candidatos-page" class="cliente-subpage">
+                <h3>Candidatos <span id="vaga-candidatos-titulo"></span></h3>
+                <p>Acompanhe quem está participando dos seus processos seletivos. Você pode ver o status de cada candidato e acessar os feedbacks gerados.</p>
+                <h4>Lista de candidatos por vaga (exemplo):</h4>
+                <ul id="lista-de-candidatos-rh">
+                    <!-- Preenchido por JS -->
+                </ul>
+            </div>
+            
+            <div id="cliente-relatorios-page" class="cliente-subpage">
+                <h3>Resultados e Relatórios</h3>
+                <p>Visualize o desempenho das suas vagas: número de candidaturas, principais motivos de rejeição e sugestões da IA para futuras contratações.</p>
+                <h4>Gráficos ou relatórios simples:</h4>
+                <ul>
+                    <li><strong>Vaga Desenvolvedor Python Júnior:</strong> 47 candidatos | 5 selecionados | 3 entrevistas marcadas</li>
+                    <li><strong>Feedback mais comum (Python Júnior):</strong> Falta de experiência com testes unitários e Docker.</li>
+                     <li><strong>Vaga Analista de Marketing Pleno:</strong> 62 candidatos | 4 selecionados | 2 entrevistas marcadas | 1 contratado</li>
+                    <li><strong>Feedback mais comum (Marketing):</strong> Pouca experiência com ferramentas de SEO avançado.</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>© 2025 Hana RH. Brasil. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
