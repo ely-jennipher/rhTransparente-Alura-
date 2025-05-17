@@ -1,1 +1,0 @@
-Cria pasta com arquivo vazio.
